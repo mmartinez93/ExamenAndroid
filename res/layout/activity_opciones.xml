@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Opciones" >
+<!-- TEXTO + SPINNER -->
+    <TextView
+        android:id="@+id/textoSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="19dp"
+        android:text="@string/textoSpinner" />
+    <Spinner
+        android:id="@+id/spinnerOpciones"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/textoSpinner" />
+    
+<!-- TEXTO + RADIOGROUP + RADIOBUTTON -->
+    <TextView
+        android:id="@+id/textoCombobox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinnerOpciones"
+        android:layout_marginTop="19dp"
+        android:layout_toLeftOf="@+id/spinnerOpciones"
+        android:text="@string/textoRadioButton" />
+    <RadioGroup
+        android:id="@+id/radioOpciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/spinnerOpciones"
+        android:layout_below="@+id/textoCombobox"
+        android:layout_marginRight="18dp"
+        android:orientation="horizontal" >
+        <RadioButton
+            android:id="@+id/opcion1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radioUno"
+            android:textSize="12dp" />
+        <RadioButton
+            android:id="@+id/opcion2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radioDos" 
+            android:textSize="12dp"/>
+    </RadioGroup>
+
+    <!-- TEXTO + EDITTEXT -->
+    <TextView
+        android:id="@+id/textoNumero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textoCombobox"
+        android:layout_below="@+id/radioOpciones"
+        android:layout_marginTop="28dp"
+        android:text="@string/textoNumero" />
+
+    <EditText
+        android:id="@+id/numeroUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textoNumero"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/botonComprar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="32dp"
+        android:layout_toRightOf="@+id/textoNumero"
+        android:text="@string/verPrecio" />
+<!-- Check box -->
+    <CheckBox
+        android:id="@+id/box1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/numeroUsuario"
+        android:layout_below="@+id/numeroUsuario"
+        android:text="@string/cajaRegalo" />
+
+    <CheckBox
+        android:id="@+id/box2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/box1"
+        android:layout_below="@+id/box1"
+        android:text="@string/tarjetaDedicada" />
+
+</RelativeLayout>
